@@ -1,0 +1,10 @@
+---
+- name: Stop Nginx
+  hosts: uat
+  tasks:
+  # stop nginx
+    - name: stop-nginx
+      service: 
+        name: nginx 
+        state: stopped
+...

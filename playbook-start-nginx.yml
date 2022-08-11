@@ -1,0 +1,10 @@
+---
+- name: Start Nginx
+  hosts: uat
+  tasks:
+  # start nginx
+    - name: start-nginx
+      service: 
+        name: nginx 
+        state: started
+...

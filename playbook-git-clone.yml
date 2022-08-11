@@ -1,0 +1,16 @@
+---
+- name: Git clone
+  hosts: all-dev-server
+  tasks:
+  # clone code
+    - name: create working directory    
+      file:
+        path: /data/app/api
+        state: directory
+    - name: clone gitlab repository
+      git:
+        repo: ["repository from gitlab or github"]
+        dest: /data/app/api
+        clone: yes
+        update: yes
+...
